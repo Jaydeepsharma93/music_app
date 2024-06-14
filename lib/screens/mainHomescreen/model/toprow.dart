@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-Row buildRow(double width, double height) {
+import '../../settingScreen/setting.dart';
+
+Row buildRow(double width, double height, context) {
   return Row(
     children: [
       SizedBox(width: width * 0.03),
@@ -15,12 +17,15 @@ Row buildRow(double width, double height) {
       Spacer(),
       IconButton(
         onPressed: () {},
-        icon: Icon(Icons.search_rounded,
-            size: height * 0.03, color: Colors.black),
+        icon: Icon(Icons.search_rounded, size: height * 0.03),
       ),
       PopupMenuButton(
         onSelected: (value) {
-          if (value == 'Settings') {}
+          if (value == 'Settings') {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => SettingScreen(),
+            ));
+          }
         },
         itemBuilder: (context) => <PopupMenuEntry>[
           PopupMenuItem(value: '', child: Text('Edit')),

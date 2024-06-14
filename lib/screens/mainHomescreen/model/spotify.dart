@@ -41,8 +41,9 @@ Column buildColumnspotify(double height) {
           itemCount: spotify.length,
         ),
       ),
+      SizedBox(height: 10),
       Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Text(
           "Featured Charts",
           style:

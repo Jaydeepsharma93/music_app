@@ -5,9 +5,8 @@ Column buildColumnplaylists(double height) {
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
       Text(
-        'No favourites',
-        style:
-        TextStyle(fontSize: height * 0.025, fontWeight: FontWeight.w400),
+        "Create some playlists, and they'll appear here.",
+        style: TextStyle(fontSize: height * 0.018),
       )
     ],
   );
