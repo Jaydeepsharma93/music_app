@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/utils/songlist.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/playmusicProvider.dart';
 
 class AlbumScreen extends StatelessWidget {
   const AlbumScreen({super.key});
@@ -33,15 +36,19 @@ class AlbumScreen extends StatelessWidget {
             itemCount: songs.length,
             itemBuilder: (context, index) => Column(
               children: [
-                Container(
-                  height: 184,
-                  width: 190,
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                      image: AssetImage(songs[index]['img']),fit: BoxFit.fill
-                    )
+                InkWell(
+                  onTap: () {
+                    Provider.of<MusicProvider>(context,listen: false).playMusic(index);
+                  },
+                  child: Container(
+                    height: 184,
+                    width: 190,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: DecorationImage(
+                        image: AssetImage(songs[index]['img']),fit: BoxFit.fill
+                      )
+                    ),
                   ),
                 ),
                 Text(songs[index]['name'],style: TextStyle(
