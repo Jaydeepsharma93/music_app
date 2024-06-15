@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:music_app/screens/mainHomescreen/model/albums.dart';
+import 'package:music_app/screens/mainHomescreen/model/all%20Music.dart';
 import 'package:music_app/screens/mainHomescreen/provider/pageindexProvider.dart';
 import 'package:provider/provider.dart';
 import 'model/favourite.dart';
@@ -16,17 +18,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List screens = [
-      buildColumnspotify(height),
-      buildColumnfavourites(height),
-      Container(),
-      Container(),
-      buildColumnplaylists(height),
-    ];
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
       body: SafeArea(
         child: Column(
           children: [
@@ -38,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                   height: height,
                   width: width,
                   decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(25),
                           topRight: Radius.circular(25))),
@@ -50,3 +44,10 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+List screens = [
+  buildColumnspotify(height),
+  buildColumnfavourites(height),
+  AllMusic(),
+  AlbumScreen(),
+  buildColumnplaylists(height),
+];

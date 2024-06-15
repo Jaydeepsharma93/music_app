@@ -12,7 +12,7 @@ Row buildRow(double width, double height, context) {
         style: TextStyle(
             fontSize: height * 0.029,
             fontWeight: FontWeight.w600,
-            color: Colors.grey.shade700),
+            color: Colors.grey.shade600),
       ),
       Spacer(),
       IconButton(
