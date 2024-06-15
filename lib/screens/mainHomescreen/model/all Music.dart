@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/screens/mainHomescreen/provider/playmusicProvider.dart';
 import 'package:music_app/utils/songlist.dart';
+import 'package:provider/provider.dart';
 
 class AllMusic extends StatelessWidget {
   const AllMusic({super.key});
@@ -36,6 +38,9 @@ class AllMusic extends StatelessWidget {
             itemBuilder: (context, index) => Column(
               children: [
                 ListTile(
+                  onTap: () {
+                    Provider.of<MusicProvider>(context,listen: false).playMusic(index);
+                  },
                   leading: Container(
                     height: 56,
                     width: 56,
