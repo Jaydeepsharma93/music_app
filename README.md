@@ -15,11 +15,4 @@
 <img src="https://github.com/Jaydeepsharma93/music_app/assets/143181361/65300e47-f193-4e29-9d5d-e0405f2914df" width = 32%>
 <img src="https://github.com/Jaydeepsharma93/music_app/assets/143181361/1306bc16-a550-41e4-bd2a-6076964a9e28" width = 32%>
 <img src="https://github.com/Jaydeepsharma93/music_app/assets/143181361/13fdcd92-99fb-4f6f-8d18-4f08a7be58ac" width = 32%>
-
-
-
-
-
-
-
-
+<video src="https://github.com/Jaydeepsharma93/music_app/assets/143181361/805ec776-8a1b-4187-b599-6e9a52bee29d" width = 32%>
