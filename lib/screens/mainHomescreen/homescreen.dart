@@ -44,6 +44,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
 List screens = [
   buildColumnspotify(height),
   buildColumnfavourites(height),

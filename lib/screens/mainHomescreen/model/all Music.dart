@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:music_app/screens/mainHomescreen/provider/playmusicProvider.dart';
+import 'package:music_app/screens/musicscreen/musicscreen.dart';
 import 'package:music_app/utils/songlist.dart';
 import 'package:provider/provider.dart';
 
@@ -40,6 +41,7 @@ class AllMusic extends StatelessWidget {
                 ListTile(
                   onTap: () {
                     Provider.of<MusicProvider>(context,listen: false).playMusic(index);
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MusicsScreen()));
                   },
                   leading: Container(
                     height: 56,
